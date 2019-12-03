@@ -6,9 +6,8 @@ public class EnemyPathing : MonoBehaviour
 {
     WaveConfig waveConfig;
     List<Transform> waypoints;
-    
-    int waypointIndex = 0;
     float enemyMoveSpeed;
+    int waypointIndex = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +22,7 @@ public class EnemyPathing : MonoBehaviour
         EnemyMovement();
     }
 
-    public void SetWaveConfig(WaveConfig waveConfig)
+    public void SetWaveConfig(WaveConfig waveConfig) //waveConfig is waiting for EnemySpawner.cs
     {
         this.waveConfig = waveConfig; //this. refers to THIS entire class.  
     }

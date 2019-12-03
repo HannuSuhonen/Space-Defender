@@ -5,17 +5,23 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] List<WaveConfig> waveConfigs;
-    int startingWave = 0;
+    [SerializeField] int startingWave = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        var currentWave = waveConfigs[startingWave];
-        StartCoroutine(SpawnAllEnemiesInWave(currentWave));
-        
+        StartCoroutine(SpawnAllWaves());
+
     }
 
-
+    private IEnumerator SpawnAllWaves()
+    {
+        for(int waveIndex = startingWave; waveIndex < waveConfigs.Count; waveIndex++)
+        {
+            var currentWave = waveConfigs[waveIndex];
+            yield return StartCoroutine(SpawnAllEnemiesInWave(currentWave));
+        }
+    }   
 
     private IEnumerator SpawnAllEnemiesInWave(WaveConfig waveConfig) // Spawn multiple enemies on interval set on GetTimeBetweenSpawns -> Serialized in WaveConfig. 
     {
