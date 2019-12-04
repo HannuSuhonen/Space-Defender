@@ -286,7 +286,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveConfigs:
+  - {fileID: 11400000, guid: 3251ca4918b726143ae0131059ddd773, type: 2}
   - {fileID: 11400000, guid: 8753de70396a039429493cc38342e829, type: 2}
+  - {fileID: 11400000, guid: 570c79bed0686a844abac84ac54c14b8, type: 2}
+  - {fileID: 11400000, guid: bb6730a4b716b204cbbf4d934029c32b, type: 2}
+  - {fileID: 11400000, guid: fe4402730f740c54dbf34c39f22ce7d9, type: 2}
+  startingWave: 0
 --- !u!4 &2101760330
 Transform:
   m_ObjectHideFlags: 0
@@ -431,6 +436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665162202275314570, guid: 7b4245c0c0c6fc146b632344ff7245d7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3665162202275314550, guid: 7b4245c0c0c6fc146b632344ff7245d7,
         type: 3}
