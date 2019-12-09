@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -8207791067540496560}
   - component: {fileID: 4124628995740547295}
   - component: {fileID: -1162975339412787311}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: enemyBlack2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,4 +129,4 @@ MonoBehaviour:
   maxTimeBetweenShots: 1
   shootingLaserPrefab: {fileID: 6540364632284073289, guid: 06d50f75501a6044f841958417811ead,
     type: 3}
-  laserShootingSpeed: 15
+  laserShootingSpeed: 11
