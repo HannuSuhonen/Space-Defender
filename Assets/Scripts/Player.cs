@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -12,16 +13,22 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject shootingLaserPrefab;
     [SerializeField] float laserShootingSpeed = 15f;
     [SerializeField] float projectileFiringPeriod = 0.1f;
+    [SerializeField] GameObject smokePrefab;
+    [SerializeField] GameObject explosionPrefab;
+    [SerializeField] float explosionTime = 1f;
 
     float xMin;
     float xMax;
     float yMin;
     float yMax;
     Coroutine firingCoroutine;
+    Level level;
+    
     // Start is called before the first frame update
     void Start()
     {
         SetUpMoveBoundaries();
+        level = FindObjectOfType<Level>();
     }
 
 
@@ -87,11 +94,20 @@ public class Player : MonoBehaviour
     private void ProcessHit(DamageDealer damageDealer)
     {
         health -= damageDealer.GetDamage();
+        smokePrefab.SetActive(true);
         damageDealer.Hit();
         if (health <= 0)
         {
-            Destroy(gameObject);
+            PlayerDie();
         }
     }
 
+    private void PlayerDie()
+    {
+        
+        Destroy(gameObject);
+        GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity) as GameObject;
+        Destroy(explosion, explosionTime);
+        level.LoadGameOver();
+    }
 }
