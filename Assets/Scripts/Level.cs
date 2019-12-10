@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -36,5 +37,23 @@ public class Level : MonoBehaviour
     public void ResetScore()
     {
         FindObjectOfType<GameSession>().ResetScore();
+    }
+
+    private void Update()
+    {
+        
+        QuickReset();
+    }
+
+    //Quick reset for debugging, press spacebar to quickly get back to the game.
+    private void QuickReset()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if(sceneName == "Space_Defender_GameOver" && Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene(1);
+            FindObjectOfType<GameSession>().ResetScore();
+        }
     }
 }
