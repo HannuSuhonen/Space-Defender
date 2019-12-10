@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Level : MonoBehaviour
 {
     [SerializeField] float timeForGameOverScene = 1f;
+
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(0);
@@ -30,5 +31,10 @@ public class Level : MonoBehaviour
     public void Quitgame()
     {
         Application.Quit();
+    }
+
+    public void ResetScore()
+    {
+        FindObjectOfType<GameSession>().ResetScore();
     }
 }

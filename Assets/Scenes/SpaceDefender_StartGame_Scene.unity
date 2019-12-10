@@ -120,6 +120,80 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &370818622
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 389206446549566826, guid: 53f17fc0fbe31d7438fc387e685666e4,
+        type: 3}
+      propertyPath: m_Name
+      value: Particle System
+      objectReference: {fileID: 0}
+    - target: {fileID: 389206446549566826, guid: 53f17fc0fbe31d7438fc387e685666e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 389206446549566823, guid: 53f17fc0fbe31d7438fc387e685666e4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 389206446549566823, guid: 53f17fc0fbe31d7438fc387e685666e4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 389206446549566823, guid: 53f17fc0fbe31d7438fc387e685666e4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 389206446549566823, guid: 53f17fc0fbe31d7438fc387e685666e4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 389206446549566823, guid: 53f17fc0fbe31d7438fc387e685666e4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 389206446549566823, guid: 53f17fc0fbe31d7438fc387e685666e4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 389206446549566823, guid: 53f17fc0fbe31d7438fc387e685666e4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 389206446549566823, guid: 53f17fc0fbe31d7438fc387e685666e4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 389206446549566823, guid: 53f17fc0fbe31d7438fc387e685666e4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 389206446549566823, guid: 53f17fc0fbe31d7438fc387e685666e4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 389206446549566823, guid: 53f17fc0fbe31d7438fc387e685666e4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 53f17fc0fbe31d7438fc387e685666e4, type: 3}
 --- !u!1 &543591098
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +479,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 718095807}
   m_CullTransparentMesh: 0
+--- !u!1001 &987154359
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1798851889446875327, guid: 784e081428daf3a42b001ebd9afac9b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Dust Clouds
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798851889446875327, guid: 784e081428daf3a42b001ebd9afac9b1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798851889446875312, guid: 784e081428daf3a42b001ebd9afac9b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798851889446875312, guid: 784e081428daf3a42b001ebd9afac9b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798851889446875312, guid: 784e081428daf3a42b001ebd9afac9b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798851889446875312, guid: 784e081428daf3a42b001ebd9afac9b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798851889446875312, guid: 784e081428daf3a42b001ebd9afac9b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798851889446875312, guid: 784e081428daf3a42b001ebd9afac9b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798851889446875312, guid: 784e081428daf3a42b001ebd9afac9b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798851889446875312, guid: 784e081428daf3a42b001ebd9afac9b1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798851889446875312, guid: 784e081428daf3a42b001ebd9afac9b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798851889446875312, guid: 784e081428daf3a42b001ebd9afac9b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798851889446875312, guid: 784e081428daf3a42b001ebd9afac9b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 784e081428daf3a42b001ebd9afac9b1, type: 3}
 --- !u!1 &1072278532
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,8 +618,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292072403
-  m_fontColor: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
+    rgba: 4278436606
+  m_fontColor: {r: 0.99607843, g: 0.7607843, b: 0.011764706, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

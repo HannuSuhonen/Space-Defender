@@ -13,8 +13,11 @@ public class Enemy : MonoBehaviour
     [SerializeField] float laserShootingSpeed = 15f;
     [SerializeField] GameObject explosionPrefab;
 
+    GameSession gameSession;
+
     private void Start()
     {
+        gameSession = FindObjectOfType<GameSession>();
         shotCounter = UnityEngine.Random.Range(minTimeBetweenShots, maxTimeBetweenShots); //This is called for each enemy.
     }
 
@@ -55,6 +58,7 @@ public class Enemy : MonoBehaviour
         damageDealer.Hit();
         if (health <= 0)
         {
+            gameSession.ScoreCounter();
             EnemyDie();
         }
     }
