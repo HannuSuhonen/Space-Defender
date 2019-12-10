@@ -132,3 +132,4 @@ MonoBehaviour:
   laserShootingSpeed: 10
   explosionPrefab: {fileID: 1283060635518066269, guid: 019573637ee9d204f82eb996cb82323d,
     type: 3}
+  scoreValue: 50

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class Player : MonoBehaviour
     float yMax;
     Coroutine firingCoroutine;
     Level level;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -93,6 +94,7 @@ public class Player : MonoBehaviour
 
     private void ProcessHit(DamageDealer damageDealer)
     {
+        FindObjectOfType<PlayerHealth>().healthOpacity();
         health -= damageDealer.GetDamage();
         smokePrefab.SetActive(true);
         damageDealer.Hit();
@@ -110,4 +112,10 @@ public class Player : MonoBehaviour
         Destroy(explosion, explosionTime);
         level.LoadGameOver();
     }
+
+    public int GetHealth()
+    {
+        return health;
+    }
+
 }

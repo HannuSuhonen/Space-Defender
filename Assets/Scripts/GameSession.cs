@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class GameSession : MonoBehaviour
 {
-    [SerializeField] int scorePerKill = 100;
     int score = 0;
 
     private void Awake()
@@ -26,9 +25,9 @@ public class GameSession : MonoBehaviour
         }
     }
 
-    public void ScoreCounter()
+    public void ScoreCounter(int scoreValue)
     {
-        score += scorePerKill;
+        score += scoreValue;
     }
 
     public int GetScore()

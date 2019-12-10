@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject shootingLaserPrefab;
     [SerializeField] float laserShootingSpeed = 15f;
     [SerializeField] GameObject explosionPrefab;
-
+    [SerializeField] int scoreValue = 100;
     GameSession gameSession;
 
     private void Start()
@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour
         damageDealer.Hit();
         if (health <= 0)
         {
-            gameSession.ScoreCounter();
+            gameSession.ScoreCounter(scoreValue);
             EnemyDie();
         }
     }
