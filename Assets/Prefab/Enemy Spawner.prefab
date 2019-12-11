@@ -49,4 +49,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 570c79bed0686a844abac84ac54c14b8, type: 2}
   - {fileID: 11400000, guid: bb6730a4b716b204cbbf4d934029c32b, type: 2}
   - {fileID: 11400000, guid: fe4402730f740c54dbf34c39f22ce7d9, type: 2}
+  - {fileID: 11400000, guid: cbec20e38dbc6654682391291268bf5e, type: 2}
   startingWave: 0

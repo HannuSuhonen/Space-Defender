@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     {
         SetUpMoveBoundaries();
         level = FindObjectOfType<Level>();
+        Debug.Log(laserShootingSpeed);
     }
 
 
@@ -84,12 +85,24 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        PowerUpCalculations(other);
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer)
         {
             return;
         }
         ProcessHit(damageDealer);
+    }
+
+    private void PowerUpCalculations(Collider2D other)
+    {
+        if (projectileFiringPeriod >= 0.2f)
+        {
+            PowerUp powerUp = other.gameObject.GetComponent<PowerUp>();
+            projectileFiringPeriod *= powerUp.GetPowerUp();
+            Debug.Log(projectileFiringPeriod);
+            powerUp.Hit();
+        }
     }
 
     private void ProcessHit(DamageDealer damageDealer)
@@ -116,6 +129,11 @@ public class Player : MonoBehaviour
     public int GetHealth()
     {
         return health;
+    }
+
+    public float GetLaserShootingSpeed()
+    {
+        return laserShootingSpeed;
     }
 
 }

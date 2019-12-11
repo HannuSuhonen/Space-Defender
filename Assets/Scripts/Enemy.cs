@@ -13,6 +13,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] float laserShootingSpeed = 15f;
     [SerializeField] GameObject explosionPrefab;
     [SerializeField] int scoreValue = 100;
+    [SerializeField] GameObject itemDropPrefab;
+    [SerializeField] float itemDropSpeed = 10f;
+    [SerializeField] bool dropItem = false;
+    [SerializeField] bool fireLaser = true;
     GameSession gameSession;
 
     private void Start()
@@ -38,8 +42,11 @@ public class Enemy : MonoBehaviour
 
     private void fire()
     {
-        GameObject laser = Instantiate(shootingLaserPrefab,transform.position, Quaternion.identity) as GameObject;
-        laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, - laserShootingSpeed);
+        if (fireLaser)
+        {
+            GameObject laser = Instantiate(shootingLaserPrefab, transform.position, Quaternion.identity) as GameObject;
+            laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -laserShootingSpeed);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -67,6 +74,17 @@ public class Enemy : MonoBehaviour
     {
         Destroy(gameObject);
         GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity) as GameObject;
+        
         Destroy(explosion, 1f);
+        ItemDrop();
+    }
+
+    private void ItemDrop()
+    {
+        if (dropItem)
+        {
+            GameObject powerUp = Instantiate(itemDropPrefab, transform.position, Quaternion.identity) as GameObject;
+            powerUp.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -itemDropSpeed);
+        }
     }
 }

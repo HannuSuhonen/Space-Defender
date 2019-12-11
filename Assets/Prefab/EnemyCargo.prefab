@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1479240030630190136
+--- !u!1 &4713907585775474853
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1479240030630190138}
-  - component: {fileID: 1479240030630190139}
-  - component: {fileID: 1530322322}
-  - component: {fileID: 9115040820035131276}
-  - component: {fileID: 1137144027157476447}
-  m_Layer: 8
-  m_Name: Enemy
+  - component: {fileID: 5674580471402953065}
+  - component: {fileID: 570742858064261235}
+  - component: {fileID: -1860128490257704435}
+  - component: {fileID: 90539139628403212}
+  - component: {fileID: 5543002408448487005}
+  m_Layer: 0
+  m_Name: EnemyCargo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1479240030630190138
+--- !u!4 &5674580471402953065
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479240030630190136}
+  m_GameObject: {fileID: 4713907585775474853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1479240030630190139
+--- !u!212 &570742858064261235
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479240030630190136}
+  m_GameObject: {fileID: 4713907585775474853}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -72,68 +72,68 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c28c4c04eecb21f43ae501ed409b727c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 18efbab524148bd47b94d30cffd7761a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.04, y: 0.84}
+  m_Size: {x: 0.82, y: 0.84}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1530322322
+--- !u!114 &-1860128490257704435
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479240030630190136}
+  m_GameObject: {fileID: 4713907585775474853}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7bca211c9f6103643bbe25166072b621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &9115040820035131276
+--- !u!58 &90539139628403212
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479240030630190136}
+  m_GameObject: {fileID: 4713907585775474853}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0065549016, y: 0.02032128}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.38699827
---- !u!114 &1137144027157476447
+  m_Radius: 0.42
+--- !u!114 &5543002408448487005
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479240030630190136}
+  m_GameObject: {fileID: 4713907585775474853}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f1454a9e2cafcf44ab2a8becf82a27d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 500
   shotCounter: 0
   minTimeBetweenShots: 0.2
-  maxTimeBetweenShots: 1
-  shootingLaserPrefab: {fileID: 6540364632284073289, guid: 06d50f75501a6044f841958417811ead,
-    type: 3}
-  laserShootingSpeed: 10
+  maxTimeBetweenShots: 3
+  shootingLaserPrefab: {fileID: 0}
+  laserShootingSpeed: 15
   explosionPrefab: {fileID: 1283060635518066269, guid: 019573637ee9d204f82eb996cb82323d,
     type: 3}
-  scoreValue: 50
+  scoreValue: 1000
   itemDropPrefab: {fileID: 8851283423620887693, guid: 39d8ddbee34effa4585ab7228d597dfd,
     type: 3}
   itemDropSpeed: 10
-  dropItem: 0
+  dropItem: 1
+  fireLaser: 0
