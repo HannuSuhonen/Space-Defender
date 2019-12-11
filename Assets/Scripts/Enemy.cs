@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject shootingLaserPrefab;
     [SerializeField] float laserShootingSpeed = 15f;
     [SerializeField] GameObject explosionPrefab;
+    [SerializeField] GameObject damagePrefab;
     [SerializeField] int scoreValue = 100;
     [SerializeField] GameObject itemDropPrefab;
     [SerializeField] float itemDropSpeed = 10f;
@@ -68,6 +69,16 @@ public class Enemy : MonoBehaviour
             gameSession.ScoreCounter(scoreValue);
             EnemyDie();
         }
+        else if(health > 100)
+        {
+            SustainDamage();
+        }
+    }
+
+    private void SustainDamage()
+    {
+        GameObject damage = Instantiate(damagePrefab, transform.position, Quaternion.identity);
+        Destroy(damage, 1f);
     }
 
     private void EnemyDie()

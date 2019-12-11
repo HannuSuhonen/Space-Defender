@@ -123,13 +123,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1454a9e2cafcf44ab2a8becf82a27d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 500
+  health: 1000
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
   shootingLaserPrefab: {fileID: 0}
   laserShootingSpeed: 15
   explosionPrefab: {fileID: 1283060635518066269, guid: 019573637ee9d204f82eb996cb82323d,
+    type: 3}
+  damagePrefab: {fileID: 5234273742407108966, guid: 6c328f9ae7d3f9743869fec9bd8e7784,
     type: 3}
   scoreValue: 1000
   itemDropPrefab: {fileID: 8851283423620887693, guid: 39d8ddbee34effa4585ab7228d597dfd,

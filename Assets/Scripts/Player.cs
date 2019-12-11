@@ -85,13 +85,19 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        PowerUpCalculations(other);
+
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer)
         {
             return;
         }
         ProcessHit(damageDealer);
+    }
+
+    //this is a temporary solution, using OntriggerExit instead of enter. 
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        PowerUpCalculations(other);
     }
 
     private void PowerUpCalculations(Collider2D other)
